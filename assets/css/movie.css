@@ -1,0 +1,721 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #00050d;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9eccf4;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-primary {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 60px;
+  background-color: #00050d;
+  transition: all ease-in-out 0.25s;
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #1c5c93;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+#  Login Button
+--------------------------------------------------------------*/
+.login-btn {
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px 12px 6px 12px;
+  white-space: nowrap;
+  transition: 0.3s;
+  margin-left: 25px;
+  font-size: 16px;
+  display: inline-block;
+  border: 2.5px solid #ffc107;
+}
+
+.login-btn:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+#header a {
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .login-btn {
+    padding: 5px 12px;
+    margin-left: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Search Section
+--------------------------------------------------------------*/
+.search-section {
+  width: 45%;
+  padding: 2px;
+  margin-left: 20px;
+}
+
+.search-section form input[type=text] {
+  border: 0;
+  padding: 4px;
+  border-radius: 3px;
+  width: calc(100% - 40px);
+}
+
+.search-section .search-icon {
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+.scrolled-offset {
+  margin-top: 60px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: rgb(155, 155, 155);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(31, 53, 72, 0.9);
+  transition: 0.3s;
+  z-index: 998;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #1f3548;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #428bca;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: calc(90vh - 110px);
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 50px 60px 0 #000;
+}
+
+#hero .carousel-item {
+  width: 100%;
+  height: calc(90vh - 110px);
+  overflow: hidden;
+}
+
+#hero .carousel-item::before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  #hero,
+  #hero .carousel-item {
+    height: calc(60vh - 70px);
+  }
+}
+
+@media (max-height: 500px) {
+  #hero,
+  #hero .carousel-item {
+    height: 120vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# Movie info section
+--------------------------------------------------------------*/
+.movie-info {
+  padding: 0 0 60px 0;
+}
+
+.movie-info .container {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px 8px rgba(63, 98, 255, 0.07);
+  background: #171d27c5;
+}
+
+.movie-info img {
+  border-radius: 8px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.movie-info .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.movie-info .link {
+  padding: 10px 0;
+  display: flex;
+}
+
+.movie-info .genres {
+  padding: 5px 20px;
+  transition: 0.1s;
+  margin-right: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 2px 8px #000;
+  border: solid 0.5px;
+  border-radius: 15px;
+}
+
+.movie-info .genres:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.movie-info .link .save {
+  color: #151515;
+  margin: 0 1px;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  transition: ease-in-out 0.3s;
+  display: inline-flex;
+  justify-content: left;
+  box-shadow: 3px 4px 8px #000;
+  align-items: center;
+}
+
+.movie-info .link .save i {
+  font-size: 28px;
+  margin-left: 4px;
+}
+
+.movie-info .link .save span{
+  opacity: 0;
+  font-weight: 600;
+}
+
+.movie-info .link .save:hover {
+  width: 110px;
+  height: 35px;
+  border-radius: 5px;
+  background: #ffc451;
+}
+
+.movie-info .link .save:hover span {
+  opacity: 1;
+}
+
+.movie-info a {
+  color: #fff;
+}
+
+.movie-info .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.movie-info .content ul li {
+  margin-bottom: 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.movie-info .content ul strong {
+  margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  padding-bottom: 10px;
+}
+
+.section-title h1 {
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 30px;
+  color: #ffd000;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  border-left: solid 4px yellow;
+  padding: 2px 10px;
+  color: #fff;
+}
+
+.section-title span {
+  font-size: 17px;
+  font-weight: 500;
+  color: #aaaaaa;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Cast & Crew
+--------------------------------------------------------------*/
+.cast-crew {
+  padding: 20px 0;
+}
+
+.cast-crew .profile {
+  text-align: center;
+}
+
+.cast-crew .profile img {
+  width: 130px;
+  height: 130px;
+  border: 3px solid #2c2f3f;
+}
+
+.cast-crew .info h1 {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.cast-crew .info span {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: #b0b0b0;
+}
+
+/*--------------------------------------------------------------
+# Watch on these services Section
+--------------------------------------------------------------*/
+.services {
+  padding: 30px 0;
+}
+
+.services .box {
+  display: inline-flex;
+}
+
+.services .icon-box {
+  margin: 20px;
+  padding: 10px 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.services .icon-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.services .title {
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.services .title a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+/*--------------------------------------------------------------
+# Similer Section
+--------------------------------------------------------------*/
+.movie {
+  overflow: hidden;
+}
+
+.movie .swiper-slide {
+  text-align: center;
+  height: 21rem;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+@media (max-width : 992px) {
+  .movie .swiper-slide {
+    height: 19rem;
+  }
+}
+
+.movie .swiper-wrapper {
+  padding: 40px 0;
+}
+
+.movie .swiper-slide img {
+  width: 100%;
+  height: 80%;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px black;
+}
+
+.movie .swiper-slide .movie-info {
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  opacity: 0;
+  position: absolute;
+  bottom: 20%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+.movie .swiper-slide .movie-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+}
+
+.movie .swiper-slide .movie-name h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.movie .swiper-slide .movie-name span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
+.movie .swiper-slide .movie-info .links {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+}
+
+.movie .swiper-slide .movie-info .links a {
+  transition: color 0.3s;
+  color: #151515;
+  margin: 0 1px;
+  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  transition: ease-in-out 0.3s;
+  color: #000;
+  display: inline-flex;
+  justify-content: center;
+  box-shadow: 0 2px 10px #000;
+  align-items: center;
+}
+
+.movie .swiper-slide .movie-info .links .play {
+  width: 120px;
+  height: 36px;
+}
+
+.movie .swiper-slide .movie-info .links i {
+  font-size: 28px;
+}
+
+.movie .swiper-slide .movie-info .links a:hover {
+  color: #151515;
+  background: #ffc451;
+  box-shadow: 6px 5px 10px #000;
+}
+
+.movie .swiper-slide:hover .movie-info {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.movie .swiper-slide:hover .movie-name {
+  bottom: 60px;
+  transition: bottom 0.4s;
+}
+
+.movie .swiper-slide:hover .links {
+  bottom: 0;
+  transition: bottom ease-in-out 0.4s;
+}
+
+.movie .swiper-slide .save {
+  position: absolute;
+  bottom: 0;
+  top: -7px;
+  left: 0;
+  transition: 0.2s;
+}
+
+.movie .swiper-slide .save i {
+  font-size: 30px;
+  color: #ffffff76;
+}
+
+.movie .swiper-slide .save .marker i {
+  font-size: 30px;
+  color: #fffffff1;
+  position: absolute;
+  top: 4px;
+  left: 0; 
+}
+
+.movie .swiper-slide .info {
+  text-align: justify;
+  padding: 10px 5px;
+}
+
+.movie .swiper-slide .info h1 {
+  font-size: 15px;
+  color: #b0b0b0;
+  margin-bottom: 3px;
+}
+
+.movie .swiper-slide .info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  font-size: 14px;
+  background-color: #00050d;
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .social-links {
+  display: flex;
+}
+
+.footer .social-links a {
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #ffc451;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+.footer .footer-links ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+}
+
+.footer .footer-links ul a {
+  color: #fff;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: #9eccf4;
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;  
+}
